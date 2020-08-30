@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+.flexbox_main_container {
+  justify-content: space-between;
+  color: #686868;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flexbox_btn_link {
+  text-align: left;
+  display: block;
+  border: none;
+  outline: none;
+  color: #686868;
+  font-size: 0.85rem;
+  background: none !important;
+  font-family: arial, sans-serif;
+  padding: 0;
+  text-decoration: underline;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flexbox_btn_link:focus {
+  outline: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexbox_left {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0.5rem;
+  margin-top: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.flexbox_right {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.flexbox_apply_btn {
+  background: none !important;
+  border: 1px solid #bfbfbf;
+  width: 7rem;
+  height: 2.5rem;
+  color: #686868;
+}
+
+.flexbox_text_price {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.btn_grp {
+  font-size: 1rem;
+  border: none !important;
+  background: none;
+  color: #686868;
+}
+
+.btn_grp:nth-child(1) {
+  border-right: 1px solid #c5c5c5 !important;
+  padding-right: 0.82rem;
+}
+
+.btn_grp:nth-child(2) {
+  border-right: 1px solid #c5c5c5 !important;
+  padding: 0 0.82rem;
+}
+
+.btn_grp:nth-child(3) {
+  padding-left: 0.82rem;
+}
+
+.bold {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.item_name {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #686868;
+}
+
+.item_name_desc {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.item_price {
+  font-size: 1.5rem;
+  color: #686868;
+}
+
+.mobile_item {
+  border-bottom: 2px solid #d9d9d9;
+}
+.mobile_item:last-child {
+  border: none;
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  .btn_grp {
+    font-size: 0.85rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width: 560px) {
+  .item_name {
+    font-size: 1rem;
+  }
+  .flexbox_main_container {
+    flex-direction: column !important;
+    font-size: 0.75rem;
+  }
+
+  h1.title {
+    font-size: 1.5rem;
+  }
+
+  .flexbox_left {
+    display: none;
+  }
+
+  .flexbox_rt_promo_main {
+    display: flex;
+    flex-direction: column;
+  }
+  .flexbox_rt_ship {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .flexbox_rt_ship .btnmdb {
+    width: 80%;
+  }
+
+  .flexbox_rt_lock {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .flexbox_mobile_only::before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 3px;
+    margin: 0 auto 0 auto;
+    background-color: #bfbfbf;
+  }
+  .flexbox_mobile_only::after {
+    display: block;
+    content: "SIGN IN to save your cart and have access to your items on mobile, tablet and desktop";
+    font-weight: 500;
+    width: 50%;
+    margin: 0 auto 0 auto;
+    padding-top: 1rem;
+  }
+
+  .flexbox_text_price {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .btn_grp {
+    font-size: 0.85rem;
   }
 }
